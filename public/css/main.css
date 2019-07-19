@@ -1,0 +1,95 @@
+:root {
+    --dark-blue: #0c509e;
+    --light-blue: #00aeeb;
+    --blue-border: #2662a8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: MAKHeliosBold;
+    src: url('/fonts/MAKHeliosBold.ttf');
+}
+
+body {
+    font-size: 0.9rem;
+}
+
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.list-group-item {
+    padding: 0.5rem 1rem;
+}
+
+/* Main Menu starts here */
+.main-menu {
+    height: 30px;
+    font-family: MAKHeliosBold;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: var(--dark-blue);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.menu__link {
+    font-size: 15px;
+    display: inline-block;
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 4px 25px 4px;
+}
+
+.menu__link:hover {
+    color: #fff;
+    background-color: var(--light-blue);
+    text-decoration: none;
+}
+
+.main-menu__item:hover .sub-menu {
+    visibility: visible;
+}
+
+.sub-menu {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--dark-blue);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sub-menu__item {
+    height: 30px;
+    border-top: 1px solid var(--blue-border);
+}
+
+.sub-menu__link {
+    display: block;
+}
+
+.sub-menu__item:hover .sub-sub-menu {
+    visibility: visible;
+}
+
+.sub-sub-menu {
+    visibility: hidden;
+    border-top: 1px solid var(--blue-border);
+    background-color: var(--dark-blue);
+    margin-top: -31px;
+    padding: 0;
+    list-style-type: none;
+    transform: translateX(100%);
+}
